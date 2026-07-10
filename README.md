@@ -15,11 +15,11 @@ The official fort.ind repo
 
 ![Screenshot 2025-12-22 113221](https://github.com/user-attachments/assets/0712fe55-bec9-4e44-9970-949d868f0c80)
 
-![image](https://files.catbox.moe/s4v4bq.png)
+![image](https://files.catbox.moe/cm53ty.png)
 
-## So what's the site all about? 🤔
+## So what's the site all about? :o
 
-Fort.ind is a website I built during the 2019 pandemic. It was a small site at the time and was used as an unblocked games site. Over the years, it grew to something that I never knew would be so amazing :D
+fort.ind is a website made by nerds, silly people, and so on. We do a range of things, from maintaining a large collection of unblocked games to running our own fedi instance! and hosting many cool things from time to time :3
 
 ## What's coming? ✨
 
