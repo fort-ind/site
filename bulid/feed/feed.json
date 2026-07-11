@@ -1,0 +1,13 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Title of the website. Update me.",
+  "home_page_url": "https://update-me.com",
+  "feed_url": "https://update-me.com/feed/feed.json",
+  "description": "Description of the website. Update me.",
+  "author": {
+    "name": "Author Name. Update me.",
+    "url": ""
+  },
+  "items": [
+  ]
+}

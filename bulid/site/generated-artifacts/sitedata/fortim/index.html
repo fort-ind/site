@@ -1,0 +1,40 @@
+<!DOCTYPE html><title>foft-im</title><style>body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+#chatbox {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    padding: 10px;
+}
+#message {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}</style><style>:root{--primary:#f9c412;--primary-dark:#e7bf60;--main-width:calc(100vw - 3em)}@media (min-width:37.5em){:root{--main-width:calc(37.5em - 3em)}}@font-face{font-display:optional;font-family:"Inter UI";font-weight:100 900;font-style:oblique 0deg 10deg;src:url(/fonts/Inter-3.19.var.woff2)format("woff2")}html{line-height:1.15;-webkit-text-size-adjust:100%;font-family:Inter UI,sans-serif;--font-family:Inter UI, sans-serif}body{margin:0}h1{font-size:3em;line-height:1.25;margin:.67em 0 .5em;font-size:2.074rem;line-height:2.4rem;margin-bottom:1.36rem}button,input{font-family:inherit;font-size:100%;line-height:1.15;overflow:visible}button{text-transform:none}input{margin:0}[type=button],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}body,p{font-size:1em}p{margin-bottom:1.5em;margin-bottom:1.36rem}body,p{font-size:1rem;line-height:1.6}@media (min-width:600px){h1{font-size:4.3978rem;line-height:4.4rem}body,p{font-size:1.1rem;line-height:1.6}h1,p{margin-bottom:1.496rem}}@media (min-width:1200px){h1{font-size:6.0756rem;line-height:6.72rem}body,p{font-size:1.2rem;line-height:1.6}h1,p{margin-bottom:1.632rem}}h1{font-family:var(--font-family)}button,input{border-radius:.3em;max-width:100%}button{background:#f2f2f2;color:#191919;cursor:pointer;display:inline-block;padding:.75em 1.5em;text-align:center;margin:0 .75em 1.5em 0}input{padding:.75em;margin-bottom:1.5em;display:inline}button:hover{background:#d9d9d9;color:#000}button:not([disabled]){background:#f9c412;color:#181818;background:var(--primary)}button:not([disabled]):hover{background:#ba9005;color:#000;background:var(--primary-dark)}input[type=text]{border:1px solid #595959;padding:.75em}*{border:0;box-sizing:border-box}body{font-family:var(--font-family);background:#181818;color:#eee}::-webkit-scrollbar-thumb:hover{background:var(--primary)}</style><h1>fortim web client</h1><div id=chatbox></div><input id=message placeholder="type smth" type=text> <button onclick=sendMessage()>Send</button><script>var websocket = new WebSocket("ws://localhost:65432/"); // Replace with your server address
+
+        websocket.onopen = function(event) {
+            console.log("WebSocket connection opened");
+        };
+
+        websocket.onmessage = function(event) {
+            var chatbox = document.getElementById("chatbox");
+            var message = document.createElement("p");
+            message.textContent = event.data;
+            chatbox.appendChild(message);
+            chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to bottom
+        };
+
+        websocket.onclose = function(event) {
+            console.log("WebSocket connection closed");
+        };
+
+        function sendMessage() {
+            var messageInput = document.getElementById("message");
+            var message = messageInput.value;
+            websocket.send(message);
+            messageInput.value = "";
+        }</script>

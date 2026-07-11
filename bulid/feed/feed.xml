@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Title of the website. Update me.</title>
+	<subtitle>Subtitle. Update me.</subtitle>
+	
+	<link href="https://update-me.com/feed/feed.xml" rel="self"/>
+	<link href="https://update-me.com"/>
+	<updated>2026-07-11T05:12:46Z</updated>
+	<id>https://update-me.com</id>
+	<author>
+		<name>Author Name. Update me.</name>
+		<email></email>
+	</author>
+</feed>

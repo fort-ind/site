@@ -1,3 +1,5 @@
+<div align="center">
+
 # Fort.ind
 
 ![Fort.ind Logo](https://github.com/user-attachments/assets/eda1c7c8-6a51-423a-8a69-d9fe1ea2bfdb)
@@ -6,12 +8,14 @@ The official fort.ind repo
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B5XRQID)
 
+</div>
+
 ## Welcome to Fort.ind
 
 > [!NOTE]
 > This git is still unfinished, and most things are from Fort.ind is not here yet
 
-## screenshots 🖼️
+## screenshots! 🖼️
 
 ![Screenshot 2025-12-22 113221](https://github.com/user-attachments/assets/0712fe55-bec9-4e44-9970-949d868f0c80)
 
@@ -31,27 +35,3 @@ Everything here is done! If you've got ideas, please open an issue :P
 - [X] read your guys' ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
 - [x] rebuild the desktop app from the ground up
 - [x] integrate a new CDN that isn't blocked and makes games load faster
-
-## Development 🛠️
-
-Built with [Eleventy](https://www.11ty.dev/) (based on [eleventy-high-performance-blog](https://github.com/google/eleventy-high-performance-blog)).
-
-```
-npm install
-npm run watch   # local dev server with live reload
-npm run build   # full production build into _site/
-```
-
-### Repo layout
-
-| Path | What it is |
-| --- | --- |
-| `index.njk` | Home page |
-| `pages/` | All other pages and feeds — every file sets its own `permalink`, so moving files here never changes URLs |
-| `_includes/` | Layouts and partials |
-| `_data/` | Global site data (`metadata.json`, CSP, analytics) |
-| `_11ty/` | Custom Eleventy plugins (image optimization, CSP, JSON-LD, HTML minify); `_11ty/vendor/` holds the vendored `eleventy-plugin-local-images` |
-| `css/`, `js/`, `fonts/`, `img/` | Static assets (`js/min.js` is built by Rollup from `src/main.js`) |
-| `api/` | Vercel serverless functions |
-| `scripts/` | Maintenance scripts |
-| `site/generated-artifacts/` | Generated site artifacts — do not edit by hand |
