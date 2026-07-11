@@ -1,9 +1,9 @@
 const GA_ENDPOINT = `https://www.google-analytics.com/collect`;
 
 // Domains to allowlist. Replace with your own!
-const originallowlist = [];
+const originallowlist = [fort1nd.com];
 // Update me.
-allowlistDomain("eleventy-high-performance-blog-sample.industrialempathy.com/");
+allowlistDomain("fort1nd.com");
 
 let hot = false;
 let age = Date.now();
@@ -23,8 +23,8 @@ export default async function (req, event) {
 
   const isOriginallowlisted =
     originallowlist.indexOf(origin) >= 0 ||
-    origin.endsWith("-cramforce.vercel.app") ||
-    origin.endsWith("-team-malte.vercel.app");
+    origin.endsWith("-th1n.vercel.app") ||
+    origin.endsWith("-rynizx.vercel.app");
   if (!isOriginallowlisted) {
     console.info("Bad origin", origin);
     return new Response("Not found", { status: 404 });
@@ -32,7 +32,7 @@ export default async function (req, event) {
 
   let cacheControl = "no-store";
   if (url.searchParams.get("ec") == "noscript") {
-    cacheControl = "max-age=30";
+    cacheControl = "max-age=20";
   }
   const headers = {
     "Access-Control-Allow-Origin": isOriginallowlisted
