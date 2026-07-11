@@ -2,7 +2,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const { JSDOM } = require("jsdom");
 const sh = require("shorthash");
-const metadata = require("../../_data/metadata.json");
+const metadata = require("../../../_data/metadata.json");
 
 // Dynamic import for ESM-only file-type package
 let fileTypeFromBuffer;

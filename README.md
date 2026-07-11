@@ -46,14 +46,12 @@ npm run build   # full production build into _site/
 
 | Path | What it is |
 | --- | --- |
-| `pages/` | Site pages with explicit permalinks (archive, tags, sitemap, favicon, …) |
-| `index.njk`, `about/` | Home and about pages |
+| `index.njk` | Home page |
+| `pages/` | All other pages and feeds — every file sets its own `permalink`, so moving files here never changes URLs |
 | `_includes/` | Layouts and partials |
 | `_data/` | Global site data (`metadata.json`, CSP, analytics) |
-| `_11ty/` | Custom Eleventy plugins (image optimization, CSP, JSON-LD, HTML minify) |
+| `_11ty/` | Custom Eleventy plugins (image optimization, CSP, JSON-LD, HTML minify); `_11ty/vendor/` holds the vendored `eleventy-plugin-local-images` |
 | `css/`, `js/`, `fonts/`, `img/` | Static assets (`js/min.js` is built by Rollup from `src/main.js`) |
 | `api/` | Vercel serverless functions |
-| `feed/` | Atom/JSON feed templates |
 | `scripts/` | Maintenance scripts |
-| `third_party/` | Vendored `eleventy-plugin-local-images` |
 | `site/generated-artifacts/` | Generated site artifacts — do not edit by hand |
