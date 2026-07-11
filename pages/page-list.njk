@@ -4,12 +4,12 @@ pagination:
   size: 20
   alias: entries
 layout: layouts/home.njk
-permalink: /page-list/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
+permalink: site/pages/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber }}/{% endif %}
 ---
 <table>
   <thead>
     <th>URL</th>
-    <th>Page Title</th>
+    <th>fort.ind</th>
   </thead>
   <tbody>
 {%- for entry in entries %}
