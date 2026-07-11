@@ -223,7 +223,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
       data: "_data",
       // Warning hardcoded throughout repo. Find and replace is your friend :)
-      output: "_site",
+      output: "bulid",
     },
   };
 };
