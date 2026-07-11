@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #2d1b3d;
+    color: #e0c0e8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pixel-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ff9ad5;
+    text-shadow: 2px 2px 0 #8a2be2;
+    margin-bottom: 15px;
+    text-transform: lowercase;
+}
+
+.welcome-tag {
+    background: rgba(75, 0, 130, 0.5);
+    border: 2px solid #9370db;
+    padding: 8px 20px;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #ffd4f4;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-box {
+    background: rgba(75, 0, 130, 0.4);
+    border: 3px solid #7a4a8f;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.box-header {
+    background: rgba(99, 48, 130, 0.6);
+    padding: 12px 15px;
+    border-bottom: 3px solid #7a4a8f;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    color: #ffd4f4;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.box-content {
+    padding: 15px;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.box-content p {
+    margin-bottom: 12px;
+    color: #e0c0e8;
+}
+
+.sub-header {
+    color: #ff9ad5;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.box-content ul {
+    list-style: none;
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
+
+.box-content ul li {
+    margin-bottom: 5px;
+    color: #d8bfd8;
+}
+
+.box-content ul li:before {
+    content: "▸ ";
+    color: #ff9ad5;
+    margin-right: 5px;
+}
+
+.highlight {
+    color: #ffd4f4;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+}
+
+.note {
+    color: #ff9ad5;
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+.preview-image {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #7a4a8f;
+    margin: 15px 0;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive fucking in the ass */
+@media (max-width: 900px) {
+    .pixel-title {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .container {
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .box-header {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+    
+    .box-content {
+        padding: 12px;
+        font-size: 0.85rem;
+    }
+}

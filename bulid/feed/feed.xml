@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Title of the website. Update me.</title>
-	<subtitle>Subtitle. Update me.</subtitle>
+	<title>fort.ind.</title>
+	<subtitle>xml feed test</subtitle>
 	
-	<link href="https://update-me.com/feed/feed.xml" rel="self"/>
-	<link href="https://update-me.com"/>
+	<link href="https://fortind.live/feed.xml" rel="self"/>
+	<link href="https://fortind.live"/>
 	<updated>2026-07-11T05:12:46Z</updated>
-	<id>https://update-me.com</id>
+	<id>https://fortind.live</id>
 	<author>
-		<name>Author Name. Update me.</name>
+		<name>fort.ind!!</name>
 		<email></email>
 	</author>
 </feed>
