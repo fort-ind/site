@@ -20,8 +20,7 @@
  */
 
 const { JSDOM } = require("jsdom");
-const { promisify } = require("util");
-const sizeOf = promisify(require("image-size"));
+const { imageSizeFromFile } = require("image-size/fromFile");
 const blurryPlaceholder = require("./blurry-placeholder");
 const srcset = require("./srcset");
 const path = require("path");
@@ -50,7 +49,7 @@ const processImage = async (img, outputPath) => {
   }
   let dimensions;
   try {
-    dimensions = await sizeOf("_site/" + src);
+    dimensions = await imageSizeFromFile("_site/" + src);
   } catch (e) {
     console.warn(e.message, src);
     return;

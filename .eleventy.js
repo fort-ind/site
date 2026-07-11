@@ -42,15 +42,13 @@
 
 const { DateTime } = require("luxon");
 const { promisify } = require("util");
+const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
-const hasha = require("hasha");
-const touch = require("touch");
 const readFile = promisify(fs.readFile);
-const readdir = promisify(fs.readdir);
 const stat = promisify(fs.stat);
 const execFile = promisify(require("child_process").execFile);
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { rssPlugin: pluginRss } = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
@@ -85,7 +83,7 @@ module.exports = function (eleventyConfig) {
         encoding: "utf-8",
       })
         .then((content) => {
-          return hasha.async(content);
+          return crypto.createHash("sha256").update(content).digest("hex");
         })
         .then((hash) => {
           callback(null, `${absolutePath}?hash=${hash.substr(0, 10)}`);
@@ -179,7 +177,6 @@ module.exports = function (eleventyConfig) {
   // We need to copy cached.js only if GA is used
   eleventyConfig.addPassthroughCopy(GA_ID ? "js" : "js/*[!cached].*");
   eleventyConfig.addPassthroughCopy("fonts");
-  eleventyConfig.addPassthroughCopy("_headers");
 
   // We need to rebuild upon JS change to update the CSP.
   eleventyConfig.addWatchTarget("./js/");
@@ -202,15 +199,6 @@ module.exports = function (eleventyConfig) {
     level: [1, 2, 3, 4],
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
-
-  // After the build touch any file in the test directory to do a test run.
-  eleventyConfig.on("afterBuild", async () => {
-    const files = await readdir("test");
-    for (const file of files) {
-      touch(`test/${file}`);
-      break;
-    }
-  });
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],

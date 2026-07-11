@@ -31,3 +31,29 @@ Everything here is done! If you've got ideas, please open an issue :P
 - [X] read your guys' ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
 - [x] rebuild the desktop app from the ground up
 - [x] integrate a new CDN that isn't blocked and makes games load faster
+
+## Development 🛠️
+
+Built with [Eleventy](https://www.11ty.dev/) (based on [eleventy-high-performance-blog](https://github.com/google/eleventy-high-performance-blog)).
+
+```
+npm install
+npm run watch   # local dev server with live reload
+npm run build   # full production build into _site/
+```
+
+### Repo layout
+
+| Path | What it is |
+| --- | --- |
+| `pages/` | Site pages with explicit permalinks (archive, tags, sitemap, favicon, …) |
+| `index.njk`, `about/` | Home and about pages |
+| `_includes/` | Layouts and partials |
+| `_data/` | Global site data (`metadata.json`, CSP, analytics) |
+| `_11ty/` | Custom Eleventy plugins (image optimization, CSP, JSON-LD, HTML minify) |
+| `css/`, `js/`, `fonts/`, `img/` | Static assets (`js/min.js` is built by Rollup from `src/main.js`) |
+| `api/` | Vercel serverless functions |
+| `feed/` | Atom/JSON feed templates |
+| `scripts/` | Maintenance scripts |
+| `third_party/` | Vendored `eleventy-plugin-local-images` |
+| `site/generated-artifacts/` | Generated site artifacts — do not edit by hand |

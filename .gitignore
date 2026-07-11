@@ -1,11 +1,17 @@
-_site/
+# Dependencies
 node_modules/
-.DS_Store
+
+# Build output
+_site/
 js/min.js
 js/min.js.map
+
+# Editor / OS
 .vscode/
+.DS_Store
+
+# Tool caches
 .netlify/
-export
-.prettierignore
+.vercel/
 .prettiercache
-eslintcache
+.eslintcache
