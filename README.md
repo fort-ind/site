@@ -12,8 +12,6 @@ The official fort.ind repo
 
 ## Welcome to Fort.ind
 
-> [!NOTE]
-> This git is still unfinished, and most things are from Fort.ind is not here yet
 
 ## screenshots! 🖼️
 
