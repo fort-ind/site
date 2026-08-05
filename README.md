@@ -10,7 +10,9 @@ The official fort.ind repo
 
 </div>
 
-## Welcome to Fort.ind
+## So what's the site all about? :o
+
+fort.ind is a website made by nerds, silly people, and so on. We do a range of things, from maintaining a large collection of unblocked games to running our own fedi instance! and hosting many cool things from time to time :p
 
 
 ## screenshots! 🖼️
@@ -19,9 +21,6 @@ The official fort.ind repo
 
 ![image](https://files.catbox.moe/cm53ty.png)
 
-## So what's the site all about? :o
-
-fort.ind is a website made by nerds, silly people, and so on. We do a range of things, from maintaining a large collection of unblocked games to running our own fedi instance! and hosting many cool things from time to time :3
 
 ## What's coming? ✨
 
@@ -30,6 +29,6 @@ Everything here is done! If you've got ideas, please open an issue :P
 - [x] finish fort.social instance 
 - [X] fix bugs
 - [X] add more flash games
-- [X] read your guys' ideas posted in [the form](https://forms.gle/K14hXqdQjfksyQnA8)
+- [X] read your guys ideas 
 - [x] rebuild the desktop app from the ground up
 - [x] integrate a new CDN that isn't blocked and makes games load faster
