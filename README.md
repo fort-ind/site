@@ -24,11 +24,14 @@ fort.ind is a website made by nerds, silly people, and so on. We do a range of t
 
 ## What's coming? ✨
 
-Everything here is done! If you've got ideas, please open an issue :P
 
 - [x] finish fort.social instance 
 - [X] fix bugs
 - [X] add more flash games
-- [X] read your guys ideas 
+- [X] read your guy's ideas 
 - [x] rebuild the desktop app from the ground up
 - [x] integrate a new CDN that isn't blocked and makes games load faster
+- [ ] make a legacy desktop app
+- [x] remake docs site
+- [ ] android app <3
+- [x] setup fort.social login w desktop
