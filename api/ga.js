@@ -1,7 +1,7 @@
 const GA_ENDPOINT = `https://www.google-analytics.com/collect`;
 
 // Domains to allowlist. Replace with your own!
-const originallowlist = [fort1nd.com];
+const originallowlist = ["fort1nd.com"];
 // Update me.
 allowlistDomain("fort1nd.com");
 
