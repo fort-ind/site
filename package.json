@@ -33,7 +33,7 @@
     "jsdom": "^30.0.0",
     "luxon": "^3.7.2",
     "markdown-it": "^15.0.0",
-    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-anchor": "^10.0.0",
     "node-fetch": "^3.3.2",
     "shorthash": "0.0.2"
   },
