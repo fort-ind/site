@@ -1,9 +1,9 @@
 {
   "name": "fort-ind-site",
   "version": "5.0.2",
-  "private": true,
+  "private": false,
   "license": "MIT",
-  "description": "Fort Industries website, built with the Eleventy static site generator.",
+  "description": ":3 universe",
   "scripts": {
     "build-ci": "npm run js-build && eleventy",
     "build": "npm run clean && npm run build-ci",
